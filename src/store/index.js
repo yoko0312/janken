@@ -5,11 +5,20 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    score: [],
   },
   mutations: {
+    onSelected(state, payload) {
+      state.score.push(payload)
+      
+    },
+    
   },
-  actions: {
-  },
-  modules: {
+  actions: {},
+  modules: {},
+  getters: {
+    score: state => {
+      return state.score
+    }
   }
-})
+}) 
